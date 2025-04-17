@@ -1,0 +1,26 @@
+{
+  "name": "codesense",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "workers-mcp docgen src/index.ts && wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.7.5",
+    "@cloudflare/workers-types": "^4.20250414.0",
+    "@types/node": "^22.14.1",
+    "typescript": "^5.5.2",
+    "vitest": "~3.0.7",
+    "wrangler": "^4.10.0"
+  },
+  "dependencies": {
+    "@mendable/firecrawl-js": "^1.23.9",
+    "cheerio": "^1.0.0",
+    "mcp-remote": "^0.0.22",
+    "workers-mcp": "^0.0.13"
+  }
+}
